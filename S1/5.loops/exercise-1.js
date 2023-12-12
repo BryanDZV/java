@@ -1,0 +1,1 @@
+for (let b = 0; b <=9; b++) {console.log(b);}
