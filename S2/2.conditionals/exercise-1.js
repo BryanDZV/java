@@ -1,3 +1,5 @@
+/*Comprueba en cada uno de los usuarios que tenga almenos dos trimestres aprobados y añade la propiedad isApproved a true o false en consecuencia. Una vez lo tengas compruebalo con un console.log.*/
+
 const alumns = [
   { name: "Pepe Viruela", T1: false, T2: false, T3: true },
   { name: "Lucia Aranda", T1: true, T2: false, T3: true },
@@ -6,14 +8,17 @@ const alumns = [
   { name: "Raquel Benito", T1: true, T2: true, T3: true },
 ];
 
-/*for (let Z = 0; Z < alumns.length; Z++) {
-    const alumn = alumns[Z];
-   if (alumn.T1 && alumn.T2 && alumn.T3==true) {
-   console.log(alumn);}
-   }*/
+let contador=0
+  for (let vuelta = 0; vuelta <alumns.length; vuelta++) {
+    const mialumno =alumns[vuelta];
+    if (mialumno.T1==true) {contador+=1; /*si pongo contaador++=contador+=1 */
+    }
+    if (mialumno.T2==true) {contador+=1;
+    }
+    if (mialumno.T2==true) {contador+=1;
+    }
+    mialumno.isApproved=contador>=2
+}
 
-   trismentreokay=0
- alumns.forEach(alum => {alum.T1==true 
-    console.log(alum);
-    
- });
+
+console.log(alumns);

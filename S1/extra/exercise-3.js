@@ -11,6 +11,10 @@ const medianas =[]
 const grandes =[]
 for (let zv = 0; zv < movies.length; zv++) {
     const element = movies[zv];
-    if (element.durationInMinutes<100) {pequeñas.push(element)} else if (element.durationInMinutes>=100 && element.durationInMinutes<200) {medianas.push(element)} else if(element.durationInMinutes<200){grandes.push(element)}
+    if (element.durationInMinutes<100) {pequeñas.push(element)}
+     if (element.durationInMinutes>=100 && element.durationInMinutes<200) {medianas.push(element)} 
+     if (element.durationInMinutes>200){grandes.push(element)}
 }
+console.log(pequeñas);
 console.log(medianas);
+console.log(grandes);

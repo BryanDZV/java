@@ -3,8 +3,8 @@ const products = ['Camiseta de Pokemon', 'Pantalón coquinero', 'Gorra de gansta
 
 for (let index = 0; index < products.length; index++) {
     const product = products[index];
-    if (product.includes("Camiseta")) {console.log(product);
-        
+    if (product.toLowerCase().includes(`Camiseta`.toLowerCase())){  console.log(product);
     }
     
 }
+

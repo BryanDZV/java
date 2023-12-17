@@ -6,6 +6,14 @@ const toys = [
   { id: 40, name: "El gato felix" },
 ];
 
-for (const iterator of toys) {if (toys.includes("gato")) {
+/*vuelta variable par estudiar tus objetos, toys variable a estudiar, {aqui instrucciones de la funcion a realizar aqui pones las 
+  condiciones o lo que sea tipo log---....}*/
+
+let toysincat=[]
+
+for (const vuelta of toys) {
+  if (!vuelta.name.includes(`gato`)) {toysincat.push(vuelta)
+  }
 }
-}
+console.log(toysincat);
+

@@ -7,11 +7,11 @@ const placesToTravel = [
   { id: 59, name: "Madagascar" },
 ];
 
-for (let z = 0; z < placesToTravel.length; z++) {
-    const lugar = placesToTravel[z];
-    if (placesToTravel[z].id==11 || placesToTravel[z].id==40) {placesToTravel.splice(z,1);
-        console.log(placesToTravel);
+for (let vuelta = 0; vuelta < placesToTravel.length; vuelta++) {
+    const lugar = placesToTravel[vuelta];
+    if (placesToTravel[vuelta].id==11 || placesToTravel[vuelta].id==40) {placesToTravel.splice(vuelta,1);
+        
     }
     
-}
+}console.log(placesToTravel);
 

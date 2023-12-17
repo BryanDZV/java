@@ -7,8 +7,8 @@ const toys = [
   { id: 40, name: "El gato felix", sellCount: 35 },
 ];
 
-for (const toy of toys) {
-    if (toy.sellCount>15) {popularToys.push(toy)
+for (const vuelta of toys) {
+    if (vuelta.sellCount>15) {popularToys.push(vuelta)
        
     }
     console.log(popularToys);
