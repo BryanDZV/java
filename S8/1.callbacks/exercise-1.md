@@ -8,7 +8,7 @@ Ejecuta varias veces la función father y haz finalmente un console.log de numbe
 ```js
 const numbersList = [];
 
-function sum(){
+function sum(a,b){
 
 }
 

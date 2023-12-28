@@ -6,15 +6,21 @@ const movies = [
   { name: "Solo en casa", durationInMinutes: 214 },
   { name: "El jardin de las palabras", durationInMinutes: 40 },
 ];
-const pequeñas =[]
-const medianas =[]
-const grandes =[]
-for (let zv = 0; zv < movies.length; zv++) {
-    const element = movies[zv];
-    if (element.durationInMinutes<100) {pequeñas.push(element)}
-     if (element.durationInMinutes>=100 && element.durationInMinutes<200) {medianas.push(element)} 
-     if (element.durationInMinutes>200){grandes.push(element)}
+let pequeña = [];
+let mediana = [];
+let grande = [];
+for (let iteracion = 0; iteracion < movies.length; iteracion++) {
+  const resultado = movies[iteracion];
+  //console.log(resultado);
+  if (resultado.durationInMinutes < 100) {
+    //console.log(resultado);
+    pequeña.push(resultado);
+  } else if (
+    resultado.durationInMinutes >= 100 &&
+    resultado.durationInMinutes < 200
+  ) {
+    mediana.push(resultado);
+  }else{
+    grande.push(resultado)
+  }
 }
-console.log(pequeñas);
-console.log(medianas);
-console.log(grandes);

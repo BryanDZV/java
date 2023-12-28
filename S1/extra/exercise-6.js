@@ -6,3 +6,12 @@ const products = [
   { name: "Reloj de papel albal", sellCount: 23 },
   { name: "Inpar de zapatos", sellCount: 6 },
 ];
+
+for (const iteracion of products) {
+  if (iteracion.sellCount > 20) {
+    goodProducts.push(iteracion);
+  }else{badProducts.push(iteracion)}
+}
+
+console.log(goodProducts);
+console.log(badProducts);

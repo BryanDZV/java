@@ -1,10 +1,21 @@
-const products = ['Camiseta de Pokemon', 'Pantalón coquinero', 'Gorra de gansta', 'Camiseta de Basket', 'Cinrurón de Orión', 'AC/DC Camiseta']
+const products = [
+  "Camiseta de Pokemon",
+  "Pantalón coquinero",
+  "Gorra de gansta",
+  "Camiseta de Basket",
+  "Cinrurón de Orión",
+  "AC/DC Camiseta",
+];
 
 
-for (let index = 0; index < products.length; index++) {
-    const product = products[index];
-    if (product.toLowerCase().includes(`Camiseta`.toLowerCase())){  console.log(product);
-    }
-    
+products.forEach((resultado) => {
+  console.log(resultado.toLowerCase().includes("Camiseta"));
+  console.log(resultado);
+});
+
+for (const resultado of products) {
+  if (resultado.toLowerCase().includes("camiseta")) {
+    console.log(resultado);
+  }
 }
-
+//for of camiseta con pequeña con grande no me coge porque?¿

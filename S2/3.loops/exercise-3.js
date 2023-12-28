@@ -7,11 +7,23 @@ const placesToTravel = [
   { id: 59, name: "Madagascar" },
 ];
 
-for (let vuelta = 0; vuelta < placesToTravel.length; vuelta++) {
-    const lugar = placesToTravel[vuelta];
-    if (placesToTravel[vuelta].id==11 || placesToTravel[vuelta].id==40) {placesToTravel.splice(vuelta,1);
-        
-    }
-    
-}console.log(placesToTravel);
+let desechados = [];
 
+for (let iteracion = 0; iteracion < placesToTravel.length; iteracion++) {
+  const elemento = placesToTravel[iteracion];
+  //console.log(elemento);
+  if (elemento.id !== 11 && elemento.id !== 40) {
+    desechados.push(elemento);
+  } else if (elemento.id == 5) {
+  }
+}
+console.log(desechados);
+//console.log(placesToTravel);
+
+for (let vuelta = 0; vuelta < placesToTravel.length; vuelta++) {
+  const elementi = placesToTravel[vuelta];
+  if (elementi.id == 11 || elementi.id == 40) {
+    placesToTravel.splice(vuelta, 1);
+  }
+}
+console.log(placesToTravel);

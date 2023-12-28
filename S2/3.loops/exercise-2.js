@@ -5,11 +5,11 @@ const alien = {
   weight: "259kg",
 };
 
-for (const key in alien) {
-  /*if (Object.hasOwnProperty.call(alien, key)) se puede omitir*/
-  const ovni = alien[key];
-  /*console.log("el ovni tiene " + key + ": " + alien[key]); FORMA 1 DE HACERLO*/
-  console.log(`el alien tiene ${key} : ${alien[key]}`);
+for (const propiedad in alien) {
+  /*if (Object.hasOwnProperty.call(alien, propiedad)) se puede omitir*/
+  const ovni = alien[propiedad];
+  /*console.log("el ovni tiene " + propiedad + ": " + alien[propiedad]); FORMA 1 DE HACERLO*/
+  console.log(`el alien tiene ${propiedad} : ${ovni}`);
 
 
 

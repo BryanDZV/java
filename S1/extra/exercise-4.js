@@ -4,9 +4,27 @@ const products = [
   { name: "Reloj de papel albal", sellCount: 23 },
   { name: "Inpar de zapatos", sellCount: 6 },
 ];
- for (const key in products) {
-    if (products.hasOwnProperty.call(products, key)) {
-        const product = products[key];
-        
-    }
- }
+
+
+let total=0;
+for (let i = 0; i < products.length; i++) {
+   let resultado= products[i].sellCount;
+   total+=resultado
+  
+}
+
+console.log("el total es:", total);
+
+
+let potales=0
+products.forEach(porresultado => {potales+=porresultado.sellCount
+  
+});
+console.log(potales);
+
+let todo=0
+for (const iteracion of products) {
+  todo+=iteracion.sellCount
+  
+}
+console.log(todo);

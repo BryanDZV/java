@@ -9,11 +9,11 @@ const toys = [
 /*vuelta variable par estudiar tus objetos, toys variable a estudiar, {aqui instrucciones de la funcion a realizar aqui pones las 
   condiciones o lo que sea tipo log---....}*/
 
-let toysincat=[]
-
-for (const vuelta of toys) {
-  if (!vuelta.name.includes(`gato`)) {toysincat.push(vuelta)
+let singato = [];
+for (const iteracion of toys) {
+  if (!iteracion.name.includes("gato")) {
+    singato.push(iteracion);
   }
 }
-console.log(toysincat);
-
+//console.log(toys);
+console.log(singato);

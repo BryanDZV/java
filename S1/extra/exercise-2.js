@@ -8,10 +8,13 @@ const foodSchedule = [
   { name: "Pasta", isVegan: true },
 ];
 
-for (let index = 0; index < foodSchedule.length; index++) {
-  const food = foodSchedule[index];
-  if (food.isVegan===false) {food.isVegan=true
-  food.name=fruits[index]}
-  console.log(food);
+
+for (let iteracion = 0; iteracion < foodSchedule.length; iteracion++) {
+  const resultado = foodSchedule[iteracion];
+ // console.log(resultado);
+  if (resultado.isVegan==false) {resultado.isVegan=true;
+    resultado.name=fruits[iteracion]
+    //console.log(resultado);
+  } 
 }
 console.log(foodSchedule);
