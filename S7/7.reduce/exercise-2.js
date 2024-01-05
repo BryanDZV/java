@@ -10,10 +10,19 @@ const exams = [
   { name: "Robert Kiyosaki", score: 2 },
   { name: "Keanu Reeves", score: 10 },
 ];
-/*let aprobados=exams.filter((vuelta)=>vuelta.score>=5 )
-console.log(aprobados);
-let resultado = aprobados.reduce((acc, vuelta) =>acc+vuelta.score,0)
-console.log(resultado);*/
 
-let resultado = exams.filter((vuelta) => vuelta.score >= 5).reduce((acc,vuelta)=>acc+vuelta.score,0)
+let nuevoArrayAprobados = exams.filter((elemento) => elemento.score > 5);
+console.log(nuevoArrayAprobados);
+
+let notaTotalDeAprobados = nuevoArrayAprobados.reduce(
+  (acc, elemento) => acc + elemento.score,
+  0
+);
+console.log(notaTotalDeAprobados);
+
+
+//en una misma varieable con un mismo array a tratar puedo combinar para scaar resutlado
+let resultado = exams
+  .filter((vuelta) => vuelta.score >= 5)
+  .reduce((acc, vuelta) => acc + vuelta.score, 0);
 console.log(resultado);

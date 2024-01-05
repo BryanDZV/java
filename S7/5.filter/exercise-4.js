@@ -5,5 +5,6 @@ const streamers = [
   { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
 ];
 
-let jugadores=streamers.filter((vuelta)=>vuelta.gameMorePlayed.includes('League of Legends') && vuelta.age<30 )
-console.log(jugadores);
+let nuevoStreamers=streamers.filter((elemento)=>
+elemento.gameMorePlayed.includes("League of Legends")&&elemento.age<30)
+console.log(nuevoStreamers);

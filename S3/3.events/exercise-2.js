@@ -1,5 +1,10 @@
-let datos=document.querySelector('input')
-function datoseve(params) {console.log(datos);
+let input$=document.querySelector('input')
+
+let elValor=(event)=> {
+    let valorInput=event.target.value
+    console.log(valorInput);
     
 }
-datos.addEventListener('focus',datoseve)
+
+input$.addEventListener('focus',elValor)
+

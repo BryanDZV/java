@@ -1,12 +1,10 @@
-let primerdiv = document.createElement("div");
-let padre = document.querySelector("body");
-//let hijo=document.createElement('p')
-padre.appendChild(primerdiv);
+let etiqueta=document.createElement('div')
+let padre=document.querySelector('body')
+padre.appendChild(etiqueta)
 
-let misp = document.querySelectorAll(primerdiv);
-let array=['<p></p>']
-for (const vuelta of array) {
-    let pprimera=document.createElement("<p>soy 1 </p>")
-  pprimera.textContent = vuelta;
-  primerdiv.appendChild(pprimera)
+for (let iteracion = 0; iteracion <= 6; iteracion++) {
+    let parrafo=document.createElement('p')
+    etiqueta.appendChild(parrafo)
+    parrafo.textContent=`Parrafo: [${iteracion}]`
+    
 }

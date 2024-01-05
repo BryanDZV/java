@@ -17,3 +17,13 @@ console.log(year3);
 ({name,itv}=car)
 console.log(name);
 console.log(itv);*/
+const cars = {name: 'Mazda 6', itv: [2015, 2011, 2020] }
+
+const {name:nombre, itv:tv}=cars
+console.log(nombre);
+console.log(tv);
+
+const[a,b,c]=tv
+console.log(a);
+console.log(b);
+console.log(c);

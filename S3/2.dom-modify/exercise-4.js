@@ -9,7 +9,13 @@ div.appendChild(pepe)
 let nota=document.createTextNode('<h>Soy dinámico jaja</h1>!') //solo añade texto no etiquetas
 pepe.appendChild(nota)
 
+let etiqueta=document.createElement('div')
+let padres=document.querySelector('body')
+padres.appendChild(etiqueta)
 
+let parrafo=document.createElement('p')
+etiqueta.appendChild(parrafo)
+parrafo.textContent='soy dinamico'
 //pepe.textContent='<h>Soy dinámico jaja!</h>' //tambien solo añade texto
 
 let prueba=document.createElement('p1')

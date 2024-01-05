@@ -1,2 +1,4 @@
-let personaje=document.querySelector("testMe")
-console.log(personaje);
+let personaje = document.querySelectorAll('[data-function="testMe"]');
+console.log(personaje[2]);
+    
+

@@ -1,7 +1,12 @@
+
+
+
 const animalFunction = () => {
+    
     return {name: 'Bengal Tiger', race: 'Tiger'}
+
 };
 
-let {name,race}=animalFunction()
-console.log(name);
-console.log(race);
+const {name:nombre, race:raza}=animalFunction()
+console.log(nombre);
+console.log(raza);

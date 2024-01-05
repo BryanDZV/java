@@ -10,8 +10,7 @@ const exams = [
     {name: 'Ayumi Hamasaki', score: 4},
     {name: 'Robert Kiyosaki', score: 2},
     {name: 'Keanu Reeves', score: 10}
-];
-
-
-let resultado=exams.reduce((acc,vuelta)=>acc+vuelta.score,0)
-console.log(resultado);
+  ];
+  //acumulador=acc mas simplificado
+  let notaTotal=exams.reduce((acumulador,elemento)=>acumulador+elemento.score,0)
+  console.log(notaTotal);

@@ -1,5 +1,9 @@
 const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
 
-//let {...date}=toy; /*opcional es destructuring*/
-let copiasprtoy=toy
-console.log(copiasprtoy);
+const copiaToy={...toy}
+console.log(copiaToy);
+
+//USANDO DESTRUCTURIN Y SPREAD
+
+const {...propiedades}=toy
+console.log(propiedades);

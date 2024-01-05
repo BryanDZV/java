@@ -1,25 +1,48 @@
-
+let boton$ = document.querySelector("button");
+let input$ = document.querySelector("input");
+let body$ = document.querySelector("body");
 const baseUrl = "https://api.nationalize.io?name=";
 
-getdatoasyc = async (inpu) => {
-  let response = await fetch("https://api.nationalize.io?name=");
-  let resjson = await response.json();
-  console.log(resjson);
+//nombre tecleo es un parametro que toma el valor de input==pasando como parametro de la api, el valor del input.
+//con el boton se llama a la funcion inicio .
+
+let consultaNacionalidades = async (nombreTecleo) => {
+  let respuesta = await fetch(baseUrl + nombreTecleo);
+  let respuestjson = await respuesta.json();
+  console.log(respuestjson);
+  return respuestjson
 };
 
-let inpu = document.querySelector("input");
-inpu.addEventListener("input", function () {
-  console.log(inpu.value);
-});
+let valorInput = () => {
+  let inputValor = input$.value;
+  console.log(inputValor);
+  return inputValor;
+};
 
-getdatoasyc(inpu);
+let porcentaje = (country) => {
+  let valorPorcentaje =country.country[0].probability * 100;
+  return valorPorcentaje;
+};
 
-
-
-function peticion(fn) {
-  let boton = document.querySelector("button");
-  boton.addEventListener("click",getdatoasyc);
- fn()
+let countryId=(country) =>{
+  let idCountry=country.country[0].country_id
+  return idCountry
 }
+let parrafosDinamicos = (nombresTecleo,porcentajeTecleo,paisTecleo) => {
+  let creacion = document.createElement("p");
+  creacion.textContent = `El nombre ${nombresTecleo} tiene un y ${porcentajeTecleo}% de ser de ${paisTecleo}`;
+  body$.appendChild(creacion);
+};
 
-peticion(getdatoasyc)
+let incio = async () => {
+  let tecleo = valorInput();
+  let api = await consultaNacionalidades(tecleo);
+  let probabilidad = porcentaje(api);
+  let paisId=countryId(api)
+  let parrafos = parrafosDinamicos(tecleo,probabilidad,paisId);
+  
+  
+  return api
+};
+
+boton$.addEventListener("click", incio);

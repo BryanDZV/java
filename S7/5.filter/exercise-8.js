@@ -1,8 +1,3 @@
-/*Dado el siguiente html y javascript, utiliza .filter() para mostrar por consola los streamers que incluyan la palabra introducida en el input. De esta forma, si introduzco 'Ru' me deberia de mostrar solo el streamer 'Rubius'. Si introduzco 'i', me deberia de mostrar el streamer 'Rubius' e 'Ibai'.
-
-En este caso, muestra solo los streamers filtrados cuando hagamos click en el button.
-````*/
-
 const streamers = [
   { name: "Rubius", age: 32, gameMorePlayed: "Minecraft" },
   { name: "Ibai", age: 25, gameMorePlayed: "League of Legends" },
@@ -10,10 +5,16 @@ const streamers = [
   { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
 ];
 
-let toFilterStreamers=()=>{
-    let letra=document.querySelector("input")
-    console.log(letra.value);
-}
+let input$ = document.querySelector("input");
+let boton$ = document.querySelector("button");
+//FUNCION buscaar y FILTRAR AL HACER CLICK
+let informacion = (parametro) => {
+  let buscarInput = input$.value.toLowerCase();
+  console.log(buscarInput);
+  let filtradoArray = streamers.filter((elemento) =>
+    elemento.name.toLowerCase().includes(buscarInput)
+  );
+  console.log(filtradoArray);
+};
 
-
-let toFilterStreamerss=streamers.filter((vuelta)=>vuelta.name)
+boton$.addEventListener("click", informacion);

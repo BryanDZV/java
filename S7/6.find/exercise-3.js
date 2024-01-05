@@ -33,3 +33,19 @@ console.log(aliens);
 //aliens.splice(2,0,mutation=encontradomut) esto añade ojeto no atributo
 //console.log(aliens);
 
+let alienEncontrado = aliens.find((elemento) =>
+  elemento.name.includes("Cucushumushu")
+);
+console.log(alienEncontrado);
+
+let mutacionEncotrada = mutations.find((elemento) =>
+  elemento.name.includes("Porompompero")
+);
+console.log(mutacionEncotrada);
+
+if (alienEncontrado && mutacionEncotrada) {
+  alienEncontrado.mutatiOn = mutacionEncotrada;
+}
+console.log(aliens);
+
+

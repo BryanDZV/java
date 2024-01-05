@@ -4,5 +4,5 @@ const movies = [
   { title: "Your Name", stars: 5, date: 2016 },
 ];
 
-let resultado=movies.find((vuelta)=>vuelta.date===2010)
-console.log(resultado);
+let peliculaEncontrada=movies.find((elemento)=>elemento.date==2010)
+console.log(peliculaEncontrada);

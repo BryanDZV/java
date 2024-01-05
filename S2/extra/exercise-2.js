@@ -32,3 +32,21 @@ const users = [
     },
   },
 ];
+let media = 0;
+let totalvolumen = 0;
+let contador = 0;
+for (const iteracion of users) {
+  //console.log(iteracion);
+  let elemento = iteracion.favoritesSounds;
+  //console.log(elemento);
+  for (const propiedad in elemento) {
+    const linea = elemento[propiedad];
+    //console.log(linea);
+    totalvolumen += linea.volume;
+    contador += 1;
+    media = totalvolumen / contador;
+  }
+}
+console.log(totalvolumen);
+console.log(contador);
+console.log(media);

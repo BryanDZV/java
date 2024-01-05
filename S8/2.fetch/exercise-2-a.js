@@ -1,18 +1,25 @@
-const baseUrl = "https://api.nationalize.io?name=";
+let boton$=document.querySelector('button')
+let input$=document.querySelector('input')
+const baseUrl = 'https://api.nationalize.io?name=';
 
+//nombre tecleo es un parametro que toma el valor de input==pasando como parametro de la api, el valor del input. 
+//con el boton se llama a la funcion inicio .
 
-getdatoasyc = async (inpu) => {
-  let response = await fetch("https://api.nationalize.io?name=");
-  let resjson = await response.json();
-  console.log(resjson);
-};
+let consultaNacionalidades=async(nombreTecleo)=>{
+  let respuesta=await fetch(baseUrl+nombreTecleo)
+  let respuestjson=await respuesta.json()
+  console.log(respuestjson);
+}
+let valorInput=()=> {
+  let InputValor=input$.value
+  console.log(InputValor);
+  return InputValor
+ } 
 
-let inpu = document.querySelector("input");
-inpu.addEventListener("input", function () {
-  console.log(inpu.value,);
-});
+ let incio=()=>{
+  let tecleo=valorInput()
+  let api=consultaNacionalidades(tecleo)
+  return api
+ }
 
-getdatoasyc(inpu);
-let boton = document.querySelector("button");
-boton.addEventListener("click", getdatoasyc);
-
+boton$.addEventListener('click',incio)

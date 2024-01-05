@@ -1,5 +1,5 @@
-const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
-const toyUpdate = {lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk']}
+const toy = { name: "Bus laiyiar", date: "20-30-1995", color: "multicolor" };
+const toyUpdate = { lights: "rgb", power: ["Volar like a dragon", "MoonWalk"] };
 
-let nuevotoys={...toy,...toyUpdate}
-console.log(nuevotoys);
+const objetoCombinado={...toy,...toyUpdate}
+console.log(objetoCombinado);

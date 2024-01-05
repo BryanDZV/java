@@ -9,7 +9,6 @@ const exams = [
     {name: 'Ayumi Hamasaki', score: 4},
     {name: 'Robert Kiyosaki', score: 2},
     {name: 'Keanu Reeves', score: 10}
-];
-
-let media=exams.reduce((acc,vuelta)=>acc+vuelta.score/10,0)
-console.log(media);
+  ];
+  let mediaNotas=exams.reduce((acc,elemento)=>acc+elemento.score/exams.length,0)
+  console.log(mediaNotas);

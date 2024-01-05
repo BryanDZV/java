@@ -5,16 +5,16 @@ const streamers = [
   { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
 ];
 
-let jugadores = streamers.filter((vuelta) =>vuelta.gameMorePlayed.includes('Legends'))
-//console.log(jugadores);
+let nuevoStreamers = streamers
+  .filter((elemento) =>
+    elemento.gameMorePlayed.includes("Legends") && elemento.age > 35
+  )
+  .map((elemento) => {
+    elemento.gameMorePlayed = elemento.gameMorePlayed.toUpperCase();
+    return elemento;
+  });
 
-let mayusculas=streamers.filter((vuelta)=>vuelta.age>35 && vuelta.gameMorePlayed.includes('Legends')?vuelta.gameMorePlayed=vuelta.gameMorePlayed.toUpperCase():'')
-console.log(mayusculas);
-
-
-/*let jugadores=streamers.filter((vuelta)=vuelta.gameMorePlayed.includes('Legends')&& vuelta.age>35 && vuelta.gameMorePlayed=vuelta.gameMorePlayed.toUpperCase())
-console.log(jugadores);*/
-
+console.log(nuevoStreamers);
 
 
 

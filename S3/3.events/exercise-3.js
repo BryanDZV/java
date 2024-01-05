@@ -1,5 +1,9 @@
-let inpueve=document.querySelector('input')
-function eveparainp(params) {console.log(inpueve);
+let input$=document.querySelector('input')
+
+let elValor=(event)=> {
+    let valorInput=event.target.value
+    console.log(valorInput);
     
 }
-inpueve.addEventListener('input',eveparainp)
+
+input$.addEventListener('input',elValor)

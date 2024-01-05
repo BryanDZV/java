@@ -25,27 +25,36 @@ for (let movie of movies) {
 
 console.log(categorias);*/
 
-let comedia=[]
-let aventura=[]
-let acción=[]
-let thriller=[]
-let animación=[]
+let comedia = [];
+let aventura = [];
+let acción = [];
+let thriller = [];
+let animación = [];
 
- 
+let categorias = [];
+for (const vuelta of movies) {
+  if (vuelta.categories.includes("comedia")) {
+    comedia.push(vuelta);
+  }
+  if (vuelta.categories.includes("aventura")) {
+    aventura.push(vuelta);
+  }
+  if (vuelta.categories.includes("acción")) {
+    acción.push(vuelta);
+  }
+  if (vuelta.categories.includes("thriller")) {
+    thriller.push(vuelta);
+  }
+  if (vuelta.categories.includes("animación")) {
+    animación.push(vuelta);
+  }
+}
 
-
- let categorias=[]
-for (const vuelta of movies) {if (vuelta.categories.includes("comedia")) {
-    comedia.push(vuelta)}
-     if(vuelta.categories.includes("aventura")){
-     aventura.push(vuelta)} 
-     if(vuelta.categories.includes("acción")){
-        acción.push(vuelta)} 
-        if(vuelta.categories.includes("thriller")){
-            thriller.push(vuelta)} 
-             if(vuelta.categories.includes("animación")){
-                animación.push(vuelta)
-            }
-        } 
-        categorias=categorias.concat([comedia],[aventura],{acción},{thriller},{animación}) 
-        console.log(categorias);
+categorias = categorias.concat(
+  {comedia},
+  {aventura},
+  {acción},
+  {thriller},
+  {animación}
+);
+console.log(categorias);
